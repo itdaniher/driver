@@ -1,0 +1,10 @@
+2x MMBZ5243B-FDICT-ND (13V gate clamp zener in SOT23-3)
+1x IRS21867STRPBF-ND (no stock) or 942-IRS21867STRPBF (mouser)
+2x 399-5088-1-ND (10nF / 200V 0603 snubber cap)
+3x SS1200-LTPMSCT-ND (200v SMA bootstrap & snubber shottky diodes)
+1x 445-3469-2-ND (25v 10uF 1206 decoupling capacitor)
+2x 399-5714-2-ND (25v 0.1uF 1206 decoupling & bootstrap capacitors)
+2x gate drive resistors
+2x 568-6544-1-ND (200v 102mO power FET in SOIC-8)
+1x 0603 LED
+1x LED current limiting resistor
