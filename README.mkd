@@ -1,0 +1,7 @@
+### driveher
+
+one kilowatt, two inches
+
+small high-power drive board designed for pushing rectified wall current around at a few too many amps.
+
+design could likely be more polished, but I just ordered boards, so let's see how this pans out.
