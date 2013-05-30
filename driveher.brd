@@ -488,8 +488,8 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="nonolith" package="SO-08" value="IRS218-67" x="10" y="5" smashed="yes" rot="R270">
-<attribute name="VALUE" x="7.968" y="1.063" size="1.27" layer="27" font="vector" ratio="12"/>
+<element name="U$1" library="nonolith" package="SO-08" value="IRS218-67" x="11" y="5" smashed="yes" rot="R270">
+<attribute name="VALUE" x="8.968" y="1.063" size="1.27" layer="27" font="vector" ratio="12"/>
 </element>
 <element name="Q1" library="nonolith" package="SO-08" value="PSMN" x="30" y="15" smashed="yes" rot="R270">
 <attribute name="VALUE" x="27.968" y="11.063" size="1.27" layer="27" font="vector" ratio="12"/>
@@ -547,6 +547,10 @@ Please make sure your boards conform to these design rules.</description>
 <element name="JP2" library="nonolith" package="1X04_ROUND" value="" x="12" y="22" smashed="yes">
 <attribute name="VALUE" x="6.92" y="18.825" size="1.27" layer="27"/>
 </element>
+<element name="HIN" library="nonolith" package="0603" value="" x="5" y="8"/>
+<element name="LIN" library="nonolith" package="0603" value="" x="5" y="4" smashed="yes" rot="R270">
+<attribute name="NAME" x="5.778" y="1.254" size="0.762" layer="25" font="vector" ratio="10"/>
+</element>
 </elements>
 <signals>
 <signal name="OUT">
@@ -565,8 +569,8 @@ Please make sure your boards conform to these design rules.</description>
 <polygon width="0.5" layer="1" isolate="1">
 <vertex x="26" y="18"/>
 <vertex x="26" y="14"/>
-<vertex x="30" y="14"/>
-<vertex x="30" y="9"/>
+<vertex x="29" y="14"/>
+<vertex x="29" y="9"/>
 <vertex x="32" y="8"/>
 <vertex x="32" y="3"/>
 <vertex x="35" y="3"/>
@@ -579,12 +583,12 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="21" y="23"/>
 <vertex x="21" y="18"/>
 </polygon>
-<wire x1="13.0734" y1="4.365" x2="16.365" y2="4.365" width="0.5" layer="1"/>
+<wire x1="14.0734" y1="4.365" x2="16.365" y2="4.365" width="0.5" layer="1"/>
 <wire x1="16.365" y1="4.365" x2="22" y2="10" width="0.5" layer="1"/>
 <wire x1="22" y1="10" x2="30" y2="10" width="0.5" layer="1"/>
 <contactref element="SC1" pad="2"/>
 <via x="47" y="10" extent="1-16" drill="1.5"/>
-<polygon width="0.5" layer="1" isolate="1.5" rank="5">
+<polygon width="0.5" layer="1" isolate="1" rank="5">
 <vertex x="50" y="9"/>
 <vertex x="50" y="12" curve="90"/>
 <vertex x="48" y="14"/>
@@ -598,7 +602,7 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="40" y="7"/>
 <vertex x="48" y="7" curve="90"/>
 </polygon>
-<polygon width="0.5" layer="16" isolate="1.5">
+<polygon width="0.5" layer="16" isolate="1">
 <vertex x="30" y="7"/>
 <vertex x="48" y="7" curve="90"/>
 <vertex x="50" y="9"/>
@@ -618,6 +622,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="43" y1="13.15" x2="43" y2="10" width="0.5" layer="1"/>
 <wire x1="43" y1="10" x2="43" y2="7.85" width="0.5" layer="1"/>
 <wire x1="28" y1="14.35" x2="29" y2="14.35" width="0.5" layer="1"/>
+<via x="31" y="10.5" extent="1-16" drill="0.5"/>
+<via x="30.24" y="13.5" extent="1-16" drill="0.5"/>
 </signal>
 <signal name="V+">
 <contactref element="Q1" pad="5"/>
@@ -690,32 +696,34 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="R1" pad="2"/>
 <wire x1="6" y1="20.15" x2="5.85" y2="20" width="0.5" layer="1"/>
 <wire x1="5.85" y1="20" x2="5.85" y2="17" width="0.5" layer="1"/>
+<wire x1="7.9266" y1="6.905" x2="7.9266" y2="9.6734" width="1" layer="1"/>
+<wire x1="7.9266" y1="9.6734" x2="6.6" y2="11" width="1" layer="1"/>
 </signal>
-<signal name="LIN">
+<signal name="LIN-P">
 <contactref element="U$1" pad="3"/>
-<contactref element="JP1" pad="2"/>
-<wire x1="6.9266" y1="4.365" x2="4.365" y2="4.365" width="0.5" layer="1"/>
-<wire x1="4.365" y1="4.365" x2="2" y2="6.73" width="0.5" layer="1"/>
+<contactref element="LIN" pad="2"/>
+<wire x1="7.9266" y1="4.365" x2="6.215" y2="4.365" width="0.5" layer="1"/>
+<wire x1="6.215" y1="4.365" x2="5" y2="3.15" width="0.5" layer="1"/>
 </signal>
-<signal name="HIN">
+<signal name="HIN-P">
 <contactref element="U$1" pad="2"/>
-<contactref element="JP1" pad="3"/>
-<wire x1="6.9266" y1="5.635" x2="5.635" y2="5.635" width="0.5" layer="1"/>
-<wire x1="2" y1="9.27" x2="5.635" y2="5.635" width="0.5" layer="1"/>
+<contactref element="HIN" pad="2"/>
+<wire x1="7.9266" y1="5.635" x2="6.365" y2="5.635" width="0.5" layer="1"/>
+<wire x1="6.365" y1="5.635" x2="6" y2="6" width="0.5" layer="1"/>
+<wire x1="6" y1="6" x2="6" y2="7.85" width="0.5" layer="1"/>
+<wire x1="6" y1="7.85" x2="5.85" y2="8" width="0.5" layer="1"/>
 </signal>
 <signal name="FLOAT">
 <contactref element="FBD" pad="C"/>
-<contactref element="U$1" pad="7"/>
+<contactref element="U$1" pad="8"/>
 <contactref element="FBC" pad="1"/>
-<wire x1="10.15" y1="17" x2="12" y2="15.15" width="0.5" layer="1"/>
-<wire x1="12" y1="15.15" x2="12" y2="9" width="0.5" layer="1"/>
-<wire x1="12" y1="9" x2="10" y2="7" width="0.5" layer="1"/>
-<wire x1="10" y1="7" x2="10" y2="6" width="0.5" layer="1"/>
-<wire x1="10" y1="6" x2="10.365" y2="5.635" width="0.5" layer="1"/>
-<wire x1="10.365" y1="5.635" x2="13.0734" y2="5.635" width="0.5" layer="1"/>
 <wire x1="18.6" y1="21" x2="18" y2="21" width="1" layer="1"/>
 <wire x1="18" y1="21" x2="17.85" y2="21" width="0.5" layer="1"/>
-<wire x1="17.85" y1="21" x2="12" y2="15.15" width="0.5" layer="1"/>
+<wire x1="10.15" y1="17" x2="13" y2="17" width="0.5" layer="1"/>
+<wire x1="13" y1="17" x2="14" y2="17" width="0.5" layer="1"/>
+<wire x1="14" y1="17" x2="18" y2="21" width="0.5" layer="1"/>
+<wire x1="14.0734" y1="6.905" x2="14.0734" y2="16.9266" width="0.5" layer="1"/>
+<wire x1="14.0734" y1="16.9266" x2="13" y2="17" width="0.5" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="Q2" pad="1"/>
@@ -770,24 +778,25 @@ Please make sure your boards conform to these design rules.</description>
 <via x="11" y="20" extent="1-16" drill="0.5"/>
 <via x="17" y="13" extent="1-16" drill="0.5"/>
 <via x="17" y="11" extent="1-16" drill="0.5"/>
-<via x="14" y="15" extent="1-16" drill="0.5"/>
-<via x="14" y="13" extent="1-16" drill="0.5"/>
-<via x="14" y="11" extent="1-16" drill="0.5"/>
+<via x="16" y="16" extent="1-16" drill="0.5"/>
+<via x="16" y="14" extent="1-16" drill="0.5"/>
+<via x="16" y="12" extent="1-16" drill="0.5"/>
 <via x="19" y="4.5" extent="1-16" drill="0.5"/>
 <via x="25" y="8.5" extent="1-16" drill="0.5"/>
 <contactref element="D2" pad="1"/>
 <via x="21" y="5" extent="1-16" drill="0.5"/>
-<via x="14" y="9" extent="1-16" drill="0.5"/>
+<via x="16" y="10" extent="1-16" drill="0.5"/>
 <via x="15" y="20" extent="1-16" drill="0.5"/>
 <via x="3" y="19" extent="1-16" drill="0.5"/>
-<via x="11" y="13" extent="1-16" drill="0.5"/>
-<via x="11" y="10" extent="1-16" drill="0.5"/>
-<via x="10" y="9" extent="1-16" drill="0.5"/>
+<via x="11.5" y="14" extent="1-16" drill="0.5"/>
 <contactref element="JP2" pad="4"/>
 <contactref element="JP2" pad="3"/>
 <contactref element="JP2" pad="2"/>
 <contactref element="JP2" pad="1"/>
 <via x="29" y="5" extent="1-16" drill="0.5"/>
+<via x="11.5" y="12" extent="1-16" drill="0.5"/>
+<via x="11.5" y="10" extent="1-16" drill="0.5"/>
+<via x="10.5" y="8" extent="1-16" drill="0.5"/>
 </signal>
 <signal name="P2">
 <contactref element="SC2" pad="2"/>
@@ -805,17 +814,17 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="22.85" y1="4.75" x2="22.85" y2="3" width="0.5" layer="1"/>
 </signal>
 <signal name="HOUT">
-<contactref element="U$1" pad="8"/>
+<contactref element="U$1" pad="7"/>
 <contactref element="RG1" pad="1"/>
-<wire x1="13.0734" y1="6.905" x2="15.055" y2="6.905" width="0.5" layer="1"/>
-<wire x1="15.055" y1="6.905" x2="20" y2="11.85" width="0.5" layer="1"/>
-<wire x1="20" y1="11.85" x2="20" y2="17" width="0.5" layer="1"/>
+<wire x1="20" y1="10" x2="20" y2="17" width="0.5" layer="1"/>
 <wire x1="20" y1="17" x2="21.15" y2="17" width="0.5" layer="1"/>
+<wire x1="14.0734" y1="5.635" x2="15.635" y2="5.635" width="0.5" layer="1"/>
+<wire x1="15.635" y1="5.635" x2="20" y2="10" width="0.5" layer="1"/>
 </signal>
 <signal name="LOUT">
 <contactref element="U$1" pad="5"/>
 <contactref element="RG2" pad="1"/>
-<wire x1="13.0734" y1="3.095" x2="13.1684" y2="3" width="0.5" layer="1"/>
+<wire x1="14.0734" y1="3.095" x2="13.1684" y2="3" width="0.5" layer="1"/>
 <wire x1="13.1684" y1="3" x2="21.15" y2="3" width="0.5" layer="1"/>
 </signal>
 <signal name="N$1">
@@ -827,6 +836,19 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="SC1" pad="1"/>
 <contactref element="SR1" pad="2"/>
 <wire x1="43" y1="17.15" x2="43" y2="14.85" width="0.5" layer="1"/>
+</signal>
+<signal name="N$3">
+<contactref element="JP1" pad="3"/>
+<contactref element="HIN" pad="1"/>
+<wire x1="4.15" y1="8" x2="3.27" y2="8" width="0.5" layer="1"/>
+<wire x1="3.27" y1="8" x2="2" y2="9.27" width="0.5" layer="1"/>
+</signal>
+<signal name="N$4">
+<contactref element="JP1" pad="2"/>
+<contactref element="LIN" pad="1"/>
+<wire x1="5" y1="4.85" x2="5" y2="6" width="0.5" layer="1"/>
+<wire x1="5" y1="6" x2="2.73" y2="6" width="0.5" layer="1"/>
+<wire x1="2.73" y1="6" x2="2" y2="6.73" width="0.5" layer="1"/>
 </signal>
 </signals>
 <errors>
